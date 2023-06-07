@@ -1,0 +1,302 @@
+/* Utilities */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.color-1 {
+  color: var(--color-1);
+}
+.color-2 {
+  color: var(--color-2);
+}
+.color-3 {
+  color: var(--color-3);
+}
+.color-4 {
+  color: var(--color-4);
+}
+
+.text-primary {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.text-secondary {
+  font-weight: 800;
+}
+
+.language {
+  font-family: "Jetbrains", monospace;
+  font-size: 0.8rem;
+}
+
+.underline {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  margin: 0 10px 0;
+  background: var(--text-primary-color);
+}
+
+.underline-light {
+  background-color: var(--text-primary-color);
+}
+
+.bg-primary,
+.underline-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary,
+.underline-secondary {
+  background-color: var(--secondary-color);
+}
+
+/* Title text */
+.head-text {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background: linear-gradient(currentColor 0 0) var(--p, 100%) 0,
+    linear-gradient(currentColor 0 0) 0 var(--d, 0),
+    linear-gradient(currentColor 0 0) var(--d, 0) 100%,
+    linear-gradient(currentColor 0 0) 100% var(--p, 100%);
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  background-color: var(--bg-secondary-color);
+  transition: 0.5s, background-position 0s 0.5s;
+}
+
+.btn:hover {
+  --d: 100%;
+  --p: 0%;
+}
+
+.btn:hover span {
+  transition: all 0.4s cubic-bezier(0, 0, 1, 0);
+}
+
+.btn:hover span {
+  transform: translateX(5px);
+}
+
+/* CTA project Buttons */
+.btn-one,
+.btn-two,
+.btn-three,
+.btn-four,
+.btn-five {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  background: var(--bg-primary-color);
+  color: var(--text-primary-color);
+}
+
+.btn-one:hover {
+  background: #2962ff;
+  color: #fff;
+}
+
+.btn-two:hover {
+  background: #f0d107;
+  color: #000;
+}
+.btn-three:hover {
+  background: orangered;
+  color: #fff;
+}
+.btn-four:hover {
+  background: #e22439;
+  color: #fff;
+}
+.btn-five:hover {
+  background: #3cce96;
+  color: #fff;
+}
+.btn-six:hover {
+  background: #0073e0;
+  color: #fff;
+}
+
+.icons a,
+.icons .icon {
+  font-size: 1.7rem;
+  margin: 10px 30px;
+  padding: 12px 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.icons span:hover,
+.icons a:hover {
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  background: var(--bg-secondary-color);
+  border-radius: 3px;
+  position: relative;
+  border: 1px solid var(--bg-secondary-color);
+}
+
+.card:hover {
+  border: 1px solid var(--bg-secondary-color);
+  background: var(--bg-primary-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.24);
+}
+
+.card-images img {
+  transition: 0.3s ease-in-out;
+}
+.card-images img:hover {
+  opacity: 0.8;
+}
+
+/* Icons */
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem;
+}
+
+/* ------- Animation starts here ------ */
+
+/* Hero Animation */
+@keyframes anime-2 {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.content .content-image {
+  position: relative;
+  animation: anime-2 1.5s infinite alternate-reverse forwards ease-in-out;
+}
+
+/* -------- Animation Ends Here ----------- */
+
+/* Dark Mode switch */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 26px;
+  position: relative;
+  width: 42px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--other-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  height: 20px;
+  width: 20px;
+  transition: 0.4s;
+  background-color: #fff;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(17px);
+}
+
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.link-style {
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.link-style:hover {
+  color: var(--primary-color);
+}
+
+.badges {
+  width: 160px;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsive 700px */
+@media (max-width: 768px) {
+  .icons a,
+  .icons .icon {
+    margin: 10px;
+  }
+
+  .theme-switch-wrapper {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /* CTA project buttons */
+  .btn-one,
+  .btn-two,
+  .btn-three,
+  .btn-four,
+  .btn-five {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}

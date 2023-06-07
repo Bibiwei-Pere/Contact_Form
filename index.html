@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bibiwei Pere is a Frontend Developer and technical writer based in Port Harcourt, Nigeria who is passionate about building web solutions and products around open source communities"
+    />
+    <meta name="keywords" content="Frontend Developer, Open Source, CommunityPro" />
+    <meta http-equiv="X-UA Compatible" content="ie=edge" />
+    <meta name="title" content="Bibiwei Pere - Frontend developer">
+    <title>Contact Form</title>
+
+    <!-- Style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <!-- Style End -->
+    
+    <!-- EmailJS Begins -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('PeAFpxXogjGaVVmVm');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <!-- EmailJS End -->
+
+  </head>
+  <body id="home">
+
+    <!-- Navbar -->
+      <nav id="navbar-scroll" class="navbar">
+        <h1 class="logo">
+          <a href="#home"
+            ><p>Logo</p></a>
+        </h1>
+        <div id="menu">
+          <ul class="nav-menu">
+            <li class="nav-items">
+              <a href="#about" class="nav-link"
+                ><i class="nav-icon fas fa-user"></i> ABOUT</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="#skills" class="nav-link"
+                ><i class="nav-icon fas fa-cog"></i> SKILLS</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="#projects" class="nav-link"
+                ><i class="nav-icon fas fa-code"></i> PROJECTS</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="https://eke.hashnode.dev/" target="_blank" class="nav-link"
+                ><i class="nav-icon fas fa-newspaper"></i> Blog</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="#contact" class="nav-link"
+                ><i class="nav-icon fas fa-address-book"></i> CONTACT</a
+              >
+            </li>
+
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+            </div>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    
+      <main>
+    <!-- Navbar End -->
+      
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="form-header">
+            <h2 class="head-text">
+          Contact<span class="underline underline-secondary"></span>
+        </h2>
+            <h2 class="text-secondary">Get In Touch</h2>
+            <p>
+              Want to connect with me or collaborate on projects together, You
+              can send me a message and I'll reply as soon as I can.. Thank You.
+            </p>
+          </div>
+          <div class="form-container">
+            <div class="form-image"></div>
+            <div class="form-page">
+
+              <!-- FORM -->
+              <form id="contact-form" class="form">
+                <input type="hidden" name="contact_number">
+                <input type="text" name="user_name" placeholder="Enter Name"/>
+                <input type="email" name="user_email" placeholder="Email"/>
+                <textarea name="message" placeholder="Message"></textarea>
+                <input type="submit" value="submit" class="btn" value="Send"/>
+              </form>
+              <!-- FORM END -->
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contavt End -->
+
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="social">
+            <div>
+              <a href="https://twitter.com/Bibiwei-pere">
+                <img
+                  src="https://img.shields.io/twitter/follow/evavic44?label=Twitter&logo=twitter&style=for-the-badge" alt="Twitter badge"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Bibiwei-Pere">
+                <img
+                  src="https://img.shields.io/github/followers/evavic44?label=Followers&logo=GitHub&style=for-the-badge"
+                  alt="GitHub badge"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://twitter.com/Bibiwei-pere">
+                <img
+                  src="https://img.shields.io/twitter/follow/evavic44?label=Twitter&logo=twitter&style=for-the-badge" alt="Twitter badge"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Bibiwei-Pere">
+                <img
+                  src="https://img.shields.io/github/followers/evavic44?label=Followers&logo=GitHub&style=for-the-badge"
+                  alt="GitHub badge"
+                />
+              </a>
+            </div>
+          </div>
+          <p>Copyright &copy; Bibiwei Pere 2023, All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+      <script src="main.js"></script>
+  </body>
+</html>
