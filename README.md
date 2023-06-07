@@ -9,6 +9,8 @@
 ## How to use
 
 `Fork` or `Clone` this repository and enjoy.
+OR
+Visit https://adrenaline.hashnode.dev/ for a step by step tutorial on how to build this contact form
 
 ---
 
