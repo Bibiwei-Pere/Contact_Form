@@ -20,42 +20,58 @@
    crossorigin="anonymous"></script>
    <script src="js/main.js" async></script>
 
-   <!-- Favicon -->
-   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-   <link rel="icon" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
-   <link rel="icon" sizes="512x512" href="./img/favicon/android-chrome-512x512.png">
-   <link rel="manifest" href="img/favicon/site.webmanifest">
-</head>
+   </head>
 
 <body id="home">
-   <section class="thankyou">
-      <nav id="navbar" class="navbar navbar-thankyou">
+      <!-- Navbar -->
+      <nav id="navbar-scroll" class="navbar">
          <h1 class="logo">
-            <p>Logo</p>
+           <a href="#home"
+             ><p>Logo</p></a>
          </h1>
          <div id="menu">
-            <ul class="nav-menu">
-               <li class="nav-items"><a href="index.html" class="nav-link">ABOUT</a></li>
-               <li class="nav-items"><a href="index.html#skills" class="nav-link">SKILLS</a></li>
-               <li class="nav-items"><a href="index.html#projects" class="nav-link">PROJECTS</a></li>
-               <li class="nav-items"><a href="index.html#contact" class="nav-link">CONTACT</a></li>
-
-               <div class="theme-switch-wrapper">
-                  <label class="theme-switch" for="checkbox">
-                     <input type="checkbox" id="checkbox">
-                     <div class="slider round"></div>
-                  </label>
-               </div>
-            </ul>            
-            <div class="hamburger">
-               <span class="bar"></span>
-               <span class="bar"></span>
-               <span class="bar"></span>
-            </div>
+           <ul class="nav-menu">
+             <li class="nav-items">
+               <a href="#about" class="nav-link"
+                 ><i class="nav-icon fas fa-user"></i> ABOUT</a
+               >
+             </li>
+             <li class="nav-items">
+               <a href="#skills" class="nav-link"
+                 ><i class="nav-icon fas fa-cog"></i> SKILLS</a
+               >
+             </li>
+             <li class="nav-items">
+               <a href="#projects" class="nav-link"
+                 ><i class="nav-icon fas fa-code"></i> PROJECTS</a
+               >
+             </li>
+             <li class="nav-items">
+               <a href="https://eke.hashnode.dev/" target="_blank" class="nav-link"
+                 ><i class="nav-icon fas fa-newspaper"></i> Blog</a
+               >
+             </li>
+             <li class="nav-items">
+               <a href="#contact" class="nav-link"
+                 ><i class="nav-icon fas fa-address-book"></i> CONTACT</a
+               >
+             </li>
+ 
+             <div class="theme-switch-wrapper">
+               <label class="theme-switch" for="checkbox">
+                 <input type="checkbox" id="checkbox" />
+                 <div class="slider round"></div>
+               </label>
+             </div>
+           </ul>
+           <div class="hamburger">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+           </div>
          </div>
-      </nav>
+       </nav>
+   <section class="thankyou">
 
       <div class="thankyou-content">
          <h1>Thank You</h1>
@@ -87,5 +103,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="main.js"></script>
+
 </body>
 </html>
